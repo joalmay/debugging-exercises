@@ -29,8 +29,8 @@ $(document).ready(function() {
 		}
 	}
 	$("button").click(function() {
-		if (!$(this).attr('data-href')) {
-			console.log(i);
+		if ($(this).attr('data-href')) {
+			console.log(this);
 			document.location = $(this).attr('data-href');
 		}
 	});
