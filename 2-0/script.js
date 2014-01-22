@@ -29,9 +29,9 @@ $(document).ready(function() {
 		}
 	}
 	$("button").click(function() {
-		if (!this.attr('data-href')) {
+		if (!$(this).attr('data-href')) {
 			console.log(i);
-			document.location = this.attr('data-href');
+			document.location = $(this).attr('data-href');
 		}
 	});
 });
