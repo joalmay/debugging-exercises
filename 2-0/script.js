@@ -21,13 +21,16 @@ $(document).ready(function() {
 			href: 'http://twitter.com'
 		}
 	];
+	
 	for (var i = 0; i<data.length; i++) {
-		if (data.text) {
-			$('#news').append("<p><button type='button' class='btn btn-default' data-href='"+data.href+"''><span class='glyphicon glyphicon-star'></span> "+data.text+"</button></p>");
+		if (data[i].text) {
+			console.log(i);
+			$('#news').append("<p><button type='button' class='btn btn-default' data-href='"+data[i].href+"''><span class='glyphicon glyphicon-star'></span> "+data[i].text+"</button></p>");
 		}
 	}
 	$("button").click(function() {
 		if (!this.attr('data-href')) {
+			console.log(i);
 			document.location = this.attr('data-href');
 		}
 	});
